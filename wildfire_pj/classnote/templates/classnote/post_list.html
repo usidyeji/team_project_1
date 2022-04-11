@@ -1,20 +1,72 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Class Note</title>
+  <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'single_page/css/main.css' %}">
+  <link rel="stylesheet" href="{% static 'classnote/css/post.css' %}">
+  <script src="https://kit.fontawesome.com/4d56c448c5.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
-  <h1>클래스 노트 만들거야</h1>
+<div class="ps">
+  {% if user.is_authenticated %}
+    {% if user.is_superuser or user.is_staff %}
+        <a class="btn btn btn-outline-primary btn-sm float-right" href="create_post/" role="button">
+            <i class="fas fa-pen"></i>&nbsp;&nbsp;New Post
+        </a>
+    {% endif %}
+  {% endif %}
+    <h1>CLASS NOTE
+      {% if tag %}<span class="badge badge-secondary"><i class="fas fa-tag"></i> {{ tag }} ({{ tag.post_set.count }})</span>{% endif %}
+    </h1>
+  {% if post_list.exists %}
+    {% for p in post_list %}
+      <div id="main-area">
+        <div class="card mb-4">
+          <div class="card-body">
+            <h2 class="card-title">{{ p.title }}</h2>
+            {% if p.hook_text %}
+            <h5 class="text-muted">{{ p.hook_text }}</h5>
+            {% endif %}
+            <p class="card-text">{{ p.post.get_content_markdown | truncatewords_html:45 | safe }}</p>
+            {% if p.tags.exists %}
+            <i class="fas fa-tags"></i>
+            {% for tag in p.tags.iterator %}
+                <a href="{{ tag.get_absolute_url }}"><span class="badge badge-pill badge-light">{{ tag }}</span></a>
+            {% endfor %}
+            <br/>
+            <br/>
+            {% endif %}
+            <a href="{{ p.get_absolute_url }}" class="btn btn-secondary">READ MORE</a>
+            <div class="text-right text-muted">
+              Posted on {{ p.created_at }}
+          </div>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  {% else %}
+  <h3>아직 게시물이 없습니다.</h3>
+  {% endif %}
+</div>
 
-  {% for p in post_list %}
-    <hr>
-    <h2><a href="{{ get.absolute_url }}">{{ p.title }}</a></h2>
-    <h3>{{ p.hook_text }}</h3>
-    <h5>{{ p.created_at }}</h4>
-    <p>{{ p.content }}</p>
-  {% endfor %}
+<section>
+  <nav class="menu">
+    <a href="/"></a>
+    <a href="/about_me/"></a>
+    <a href="skill.html"></a>
+    <a href="/pj/"></a>
+    <a href="/note/" class="on"></a>
+  </nav>
+</section>
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
 </body>
 </html>

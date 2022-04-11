@@ -1,36 +1,56 @@
 <!DOCTYPE html>
+{% load static %}
+{% load socialaccount %}
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>It's YeJi</title>
   <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css" rel="stylesheet">
-  <link rel="stylesheet" href="../../static/single_page/css/main.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'single_page/css/main.css' %}">
   <script src="https://kit.fontawesome.com/4d56c448c5.js" crossorigin="anonymous"></script>
 
 </head>
 <body>
-  <header>
-		<h1>안녕하세요,<br>
-    남예지입니다.</h1>
-		<ul>
-			<li><a href="#"><i class="fab fab fa-github"></i></a></li>
-			<li><a href="#"><i class="fab fab fab fab fa-instagram"></i></a></li>
-			<li><a href="#"><i class="fas fas fa-envelope"></i></a></li>
-		</ul>
+  <!-- <ul class="navbar-nav ml-auto">
+    {% if user.is_authenticated %}
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          &nbsp;
+      {{ user.username }}</a>
+      <span class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="/accounts/logout/">Log Out</a>
+      </span>
+    </li>
+    {% else %}
+    <li class="nav-item">
+      <a class="nav-link" href="#" data-toggle="modal" data-target="#loginModal">Log In</a>
+    </li>
+    {% endif %}
+</ul> -->
 
-	</header>
-  
-  <section>
-    <nav class="menu">
-      <a href="index.html" class="on"></a>
-      <a href="introduce.html"></a>
-      <a href="skill.html"></a>
-      <a href="project.html"></a>
-      <a href="project.html"></a>
-    </nav>
-  </section>
+<header>
+  <h1>안녕하세요,<br>
+  남예지입니다.</h1>
+  <ul>
+    <li><a href="#"><i class="fab fab fa-github"></i></a></li>
+    <li><a href="#"><i class="fas fas fa-envelope"></i></a></li>
+    <li><a href="#"><i class="fas fas fas fa-file-download"></i></a></li>
+  </ul>
+
+</header>
+
+<section>
+  <nav class="menu">
+    <a href="/" class="on"></a>
+    <a href="/about_me/"></a>
+    <a href="/dashboard/"></a>
+    <a href="/pj/"></a>
+    <a href="/note/"></a>
+  </nav>
+</section>
 
 
 </body>

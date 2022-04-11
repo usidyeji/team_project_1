@@ -59,15 +59,11 @@ header ul li a{
 
 }
 
-p.resume{
-  font: 25px;
-}
-
 /* menu */
 section nav.menu {
   position: absolute;
   /* background: #000; */
-  /* width: 100%; */
+  width: 100%;
   height: 250px;
   display: flex;
   flex-direction: column;
@@ -104,3 +100,8 @@ main article .me img {
   border-radius: 50%;
   
 } */
+
+div.col-lg-4{
+  width: 321px;
+  height: 344px;
+}
