@@ -15,31 +15,110 @@
 <body>
   
 <main>		
-    <div>
+    <div data-toggle="modal" data-targer="#pj1">
       <article class="profile">
         <img src="https://picsum.photos/200/300" alt="프로젝트 이미지" >
         <h1>Project1</h1>
         <h2>Lorem ipsum dolor sit amet consectetur adipisicing.</h2>
-        <a href="#" class="moreview">Watch More</a>
+        <a href="#" class="moreview" data-toggle="modal" data-target="#pj1">Watch More</a>
       </article>
     </div>
-    <div>
+    <div data-toggle="modal" data-targer="#pj2">
       <article class="profile">
         <img src="https://picsum.photos/200/400" alt="프로젝트 이미지" >
         <h1>Project2</h1>
         <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
-        <a href="#" class="moreview">Watch More</a>
+        <a href="#" class="moreview" data-toggle="modal" data-target="#pj2">Watch More</a>
       </article>
     </div>
-    <div>
+    <div data-toggle="modal" data-targer="#pj3">
       <article class="profile">
         <img src="https://picsum.photos/200/220" alt="프로필 이미지" >
         <h1>Project3</h1>
         <h2>Lorem ipsum dolor sit amet.</h2>
-        <a href="#" class="moreview">Watch More</a>
+        <a href="#" class="moreview" data-toggle="modal" data-target="#pj3">Watch More</a>
       </article>
     </div>
+
 	</main>
+
+  <div class="modal fade" id="pj1" tabindex="-1" role="dialog" aria-labelledby="pj1" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="pj1">프로젝트 타이틀1</h5>
+                <button type="btn btn-outline-primary" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <img class="img-fluid" src="https://picsum.photos/280/200">
+                    </div>
+                    <div class="col-lg-5">
+                        <p>프로젝트 내용1</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+  </div>
+  
+  <div class="modal fade" id="pj2" tabindex="-1" role="dialog" aria-labelledby="pj2" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="pj2">프로젝트 타이틀2</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <img class="img-fluid" src="https://picsum.photos/280/200">
+                    </div>
+                    <div class="col-lg-5">
+                        <p>프로젝트 내용2</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+  </div>
+  
+  <div class="modal fade" id="pj3" tabindex="-1" role="dialog" aria-labelledby="pj3" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="pj3">프로젝트 타이틀3</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <img class="img-fluid" src="https://picsum.photos/280/200">
+                    </div>
+                    <div class="col-lg-5">
+                        <p>프로젝트 내용3</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+  </div>
 
   <section>
     <nav class="menu">

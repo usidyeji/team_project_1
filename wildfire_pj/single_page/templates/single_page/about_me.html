@@ -11,6 +11,8 @@
   <link rel="stylesheet" href="{% static 'single_page/css/introduce.css' %}">
   <!-- <link rel="stylesheet" href="{% static 'single_page/css/main.css' %}"> -->
   <script src="https://kit.fontawesome.com/4d56c448c5.js" crossorigin="anonymous"></script>
+  <script src="{% static 'single_page/js/jquery-3.6.0.min.js' %}"></script>
+  <script src="{% static 'single_page/js/skillbar.js' %}"></script>
 
 </head>
 <body>
@@ -20,20 +22,60 @@
       <img src="{% static 'single_page/imgs/P20211225_140802685_CD8FC5BD-4A0C-48D7-B5EB-EF72C779E565.JPG' %}" alt="개인사진">
 
       <h2>
-        <p>Lorem ipsum,<br> dolor sit amet <br>consectetur adipisicing elit. Neque!</p>
+        Lorem ipsum,<br> dolor sit amet <br>consectetur adipisicing elit. Neque!
       </h2>
     </article>
   </main>
+  <br>
+  <!-- <i class="fas fa-chevron-circle-down"></i> -->
+  <br>
+  <br>
+  <!-- skill bar -->
+  <div id="myskills">
+    <span class="title">My Skills</span>
+    <div class="skill">
+        <span class="skillname">HTML</span>
+        <span class="progressbar">
+          <span class="gauge" per="90">
+          </span>
+        </span>
+        <span class="skillper">90%</span>
+    </div>
+    <div class="skill">
+        <span class="skillname">CSS</span>
+        <span class="progressbar">
+          <span class="gauge" per="90">
+          </span>
+        </span>
+        <span class="skillper">90%</span>
+    </div>
+    <div class="skill">
+        <span class="skillname">JavaScript</span>
+        <span class="progressbar">
+          <span class="gauge" per="80">
+          </span>
+        </span>
+        <span class="skillper">80%</span>
+    </div>
+    <div class="skill">
+        <span class="skillname">Python</span>
+        <span class="progressbar">
+          <span class="gauge" per="75">
+          </span>
+        </span>
+        <span class="skillper">75%</span>
+    </div>
+</div>
 
-  <section>
-    <nav class="menu">
-      <a href="/"></a>
-      <a href="/about_me/" class="on"></a>
-      <a href="/dashboard/"></a>
-      <a href="/pj/"></a>
-      <a href="/note/"></a>
-    </nav>
-  </section>
+<section>
+  <nav class="menu">
+    <a href="/"></a>
+    <a href="/about_me/" class="on"></a>
+    <a href="/dashboard/"></a>
+    <a href="/pj/"></a>
+    <a href="/note/"></a>
+  </nav>
+</section>
   
 
 

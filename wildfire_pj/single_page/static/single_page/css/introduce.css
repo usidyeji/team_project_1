@@ -69,3 +69,67 @@ section nav.menu a.on {
   background-color: rgb(81, 158, 245);
   box-shadow: 2px 2px 5px rgba(74, 152, 255, 0.7);
 }
+
+/* skill */
+#myskills{
+  margin-left: 28vw;
+  margin-bottom: 50px;
+}
+#myskills > .title{
+  display: inline-block;
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 40px;
+  /* border:3px solid blue; */
+}
+#myskills > .skill{
+  width: 600px;
+  /* border:3px solid blue; */
+}
+#myskills > .skill > .skillname{
+  display: inline-block;
+  width: 300px;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom:10px;
+  /* border:3px solid blue; */
+}
+#myskills > .skill > .progressbar {
+  display: inline-block;
+  width: 520px;
+  height: 27.3px;
+  /* border: 3px solid blue; */
+}
+#myskills > .skill > .skillper {
+  display: inline-block;
+  width: 60px;
+  /* height: 21px; */
+  text-align: center;
+  font-size: 15px;
+  /* font-weight: 100; */
+  margin-left: 45%;
+  /* border: 3px solid blue; */
+}
+
+
+/* skill bar */
+.progressbar {
+  display: inline-block;
+  width: 520px;
+  height: 27px;
+  margin-left: 25px;
+  /* margin-bottom: 25px; */
+  background-color: aliceblue;
+  border: 3px solid aliceblue;
+  border-radius: 10px;
+}
+
+.gauge {
+  display: inline-block;
+  width: 10%;
+  height: 21px;
+  background-color: rgb(81, 158, 245);
+  border-radius: 10px;
+  transition: 1s linear;
+  /* border: 3px solid blue; */
+}
