@@ -17,7 +17,8 @@
 <body>
     <h1>Edit Post</h1>
     <hr/>
-    <form method="post" enctype="multipart/form-data">{% csrf_token %}
+    <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
             {{ form | crispy }}
             <div id="idv_id_tags_str">
                 <label for="id_tags_str">Tags:</label>
@@ -29,13 +30,13 @@
     {{ form.media }}
 
 <section>
-    <nav class="menu">
+    <div class="menu">
         <a href="/" ></a>
         <a href="/about_me/"></a>
         <a href="skill.html"></a>
         <a href="/pj/"></a>
         <a href="/note/" class="on"></a>
-    </nav>
+    </div>
 </section>
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

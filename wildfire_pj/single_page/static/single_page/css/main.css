@@ -64,7 +64,7 @@ p.resume{
 }
 
 /* menu */
-section nav.menu {
+section div.menu {
   position: absolute;
   /* background: #000; */
   /* width: 100%; */
@@ -75,14 +75,14 @@ section nav.menu {
   top: 30%;
   justify-content: space-between;
 }
-section nav.menu a {
+section div.menu a {
   background: aliceblue;
   width: 30px;
   height: 30px;
   border-radius: 50%;
   margin: 0px 10px;
 }
-section nav.menu a.on {
+section div.menu a.on {
   background-color: rgb(81, 158, 245);
   box-shadow: 2px 2px 5px rgba(74, 152, 255, 0.7);
 }
