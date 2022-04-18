@@ -48,11 +48,11 @@ main div article.profile img {
 main div article.profile h1 {
 	font-weight: bold;
 	font-size: 22px;
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-family: 'NanumBarunGothicYetHangul';
 	letter-spacing: 1px;
 	line-height: 1;
 	color: #555;
-	margin-bottom: 5px;
+	margin-bottom: 15px;
 }
 main div article.profile h2 {
 	font-weight: normal;

@@ -44,6 +44,11 @@ header h1::after {
   margin-top: 13px;
 }
 
+h1.title{
+  color: #555;
+  margin-bottom: 15px;
+}
+
 header ul {
   position: relative;
   left: 60px;
@@ -56,16 +61,19 @@ header ul li {
 header ul li a{
   font-size: 45px;
   color: #fff;
-
 }
 
 p.resume{
   font: 25px;
 }
 
+a.linkmain:hover{
+  color: rgb(81, 158, 245);
+}
+
 /* menu */
 section div.menu {
-  position: absolute;
+  position: fixed;
   /* background: #000; */
   /* width: 100%; */
   height: 250px;
@@ -85,6 +93,43 @@ section div.menu a {
 section div.menu a.on {
   background-color: rgb(81, 158, 245);
   box-shadow: 2px 2px 5px rgba(74, 152, 255, 0.7);
+}
+
+div.post{
+  margin-left: 20px;
+}
+
+body.post{
+  margin-left: 20px;
+}
+
+div#card{
+  margin-top: 10px;
+}
+
+button{
+  margin-bottom: 10px;
+}
+
+.btn_gotop {
+	/* display:none; */
+	position:fixed;
+	bottom:0px;
+	right:47px;
+	z-index:999;
+	/* border:1px solid #ccc; */
+	outline:none;
+	/* background-color:white; */
+	color:#333;
+	cursor:pointer;
+	padding:15px 20px;
+	border-radius:100%;
+	margin-left: 760px;
+  text-decoration: none;
+}
+.btn_gotop:hover{
+  text-decoration: none;
+  color: #333; 
 }
 
 /* introduce article

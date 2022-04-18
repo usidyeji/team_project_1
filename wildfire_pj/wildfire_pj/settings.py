@@ -104,27 +104,27 @@ WSGI_APPLICATION = 'wildfire_pj.wsgi.application'
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'wildfireDB',  # DB명
-        'USER': 'namyj',   #개발자 id
-        'PASSWORD':'wl8503675',   # 개발자 pw
-        'HOST': '13.209.99.58',       # 서버 IP
-        'PORT': '3306'
-    }
-}
-# mysql # SQL에 우선순위 있음, SQL 안될 시에 sqlite가 된다는 의미로 뒤에 붙여준 것(지워져도 됨)
 # DATABASES = {
 #     'default': {
-#         'ENGINE': os.environ.get('SQL_ENGINE', 'django.db.backends.sqlite3'),
-#         'NAME': os.environ.get('SQL_DATABASE', os.path.join(BASE_DIR / 'db.sqlite3')),
-#         'USER': os.environ.get('SQL_USER', 'user'),
-#         'PASSWORD': os.environ.get('SQL_PASSWORD', 'password'),
-#         'HOST': os.environ.get('SQL_HOST', 'localhost'),
-#         'PORT': os.environ.get('SQL_PORT', '5432')
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'wildfireDB',  # DB명
+#         'USER': 'namyj',   #개발자 id
+#         'PASSWORD':'wl8503675',   # 개발자 pw
+#         'HOST': '13.209.99.58',       # 서버 IP
+#         'PORT': '3306'
 #     }
 # }
+# mysql # SQL에 우선순위 있음, SQL 안될 시에 sqlite가 된다는 의미로 뒤에 붙여준 것(지워져도 됨)
+DATABASES = {
+    'default': {
+        'ENGINE': os.environ.get('SQL_ENGINE', 'django.db.backends.sqlite3'),
+        'NAME': os.environ.get('SQL_DATABASE', os.path.join(BASE_DIR / 'db.sqlite3')),
+        'USER': os.environ.get('SQL_USER', 'user'),
+        'PASSWORD': os.environ.get('SQL_PASSWORD', 'password'),
+        'HOST': os.environ.get('SQL_HOST', 'localhost'),
+        'PORT': os.environ.get('SQL_PORT', '5432')
+    }
+}
  
 
 # Password validation
