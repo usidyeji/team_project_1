@@ -67,6 +67,10 @@ p.resume{
   font: 25px;
 }
 
+a.linkmain:hover{
+  color: rgb(81, 158, 245);
+}
+
 /* menu */
 section div.menu {
   position: fixed;
@@ -121,6 +125,11 @@ button{
 	padding:15px 20px;
 	border-radius:100%;
 	margin-left: 760px;
+  text-decoration: none;
+}
+.btn_gotop:hover{
+  text-decoration: none;
+  color: #333; 
 }
 
 /* introduce article

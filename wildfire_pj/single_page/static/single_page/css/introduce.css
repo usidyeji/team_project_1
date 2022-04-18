@@ -158,7 +158,12 @@ a.button {
   border-radius: 3px;
   /* transition: all 0.2s ; */
   background-color: rgb(81, 158, 245);
+  text-decoration: none;
+}
 
+a.button:hover{
+  background-color: rgb(73, 146, 228);
+  opacity: 0.9;
 }
 
 p{
