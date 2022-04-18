@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>It's Yeji</title>
   <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+  <link href="https://hangeul.pstatic.net/hangeul_static/css/NanumBarunGothicYetHangul.css" rel="stylesheet">  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
   <link rel="stylesheet" href="{% static 'single_page/css/introduce.css' %}">
   <!-- <link rel="stylesheet" href="{% static 'single_page/css/main.css' %}"> -->
   <script src="https://kit.fontawesome.com/4d56c448c5.js" crossorigin="anonymous"></script>
@@ -19,11 +19,14 @@
 
   <main>
     <article class="me">
-      <img src="{% static 'single_page/imgs/P20211225_140802685_CD8FC5BD-4A0C-48D7-B5EB-EF72C779E565.JPG' %}" alt="개인사진">
-
-      <h2>
-        Lorem ipsum,<br> dolor sit amet <br>consectetur adipisicing elit. Neque!
-      </h2>
+      <div>
+        <img src="{% static 'single_page/imgs/P20211225_140802685_CD8FC5BD-4A0C-48D7-B5EB-EF72C779E565.JPG' %}" alt="개인사진">
+      </div>
+      <div>
+        <h2>
+          무슨 얘기를 써야 할까~
+        </h2>
+      </div>
     </article>
   </main>
   <br>
@@ -68,13 +71,13 @@
 </div>
 
 <section>
-  <nav class="menu">
+  <div class="menu">
     <a href="/"></a>
     <a href="/about_me/" class="on"></a>
     <a href="/dashboard/"></a>
     <a href="/pj/"></a>
     <a href="/note/"></a>
-  </nav>
+  </div>
 </section>
   
 

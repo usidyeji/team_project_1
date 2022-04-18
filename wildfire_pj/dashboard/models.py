@@ -8,6 +8,7 @@
 from django.db import models
 
 class Wildfire(models.Model):
+    id = models.IntegerField(primary_key=True)
     ocurdt_y = models.CharField(max_length=4, blank=True, null=True)
     ocurdt_m = models.CharField(max_length=2, blank=True, null=True)
     ocurdt_d = models.CharField(max_length=2, blank=True, null=True)
@@ -24,8 +25,32 @@ class Wildfire(models.Model):
     diravg = models.CharField(max_length=4, blank=True, null=True)
 
     class Meta:
-        managed = False
         db_table = 'wildfire'
 
     def __str__(self):
         return f'{self.ocurdt_y}{self.ocurdt_m}{self.ocurdt_d}--{self.ocurdo};{self.dmgarea}'
+
+class MonthCause(models.Model):
+    year = models.CharField(max_length=4, blank=True, null=True)
+    month = models.CharField(max_length=8, blank=True, null=True)
+    cause = models.CharField(max_length=20, blank=True, null=True)
+    count = models.IntegerField(blank=True, null=True)
+
+    def __str__(self):
+        return f'{self.year}{self.month}--{self.cause}'
+
+class WildFire_day(models.Model):
+    year = models.CharField(max_length=4, blank=True, null=True)
+    day = models.CharField(max_length=4, blank=True, null=True)
+    count = models.IntegerField(blank=True, null=True)
+
+    def __str__(self):
+        return f'{self.year}{self.day}::{self.count}'
+
+class WildFire_time(models.Model):
+    year = models.CharField(max_length=4, blank=True,null=True)
+    time = models.CharField(max_length=40, blank=True,null=True)
+    count = models.IntegerField(blank=True,null=True)
+
+    def __str__(self):
+        return f'{self.year}{self.time}::{self.count}'

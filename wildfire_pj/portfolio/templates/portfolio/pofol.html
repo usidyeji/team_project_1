@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projects</title>
   <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css" rel="stylesheet">
+  <link href="https://hangeul.pstatic.net/hangeul_static/css/NanumBarunGothicYetHangul.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
   <!-- <link rel="stylesheet" href="{% static 'single_page/css/main.css' %}"> -->
   <link rel="stylesheet" href="{% static 'portfolio/css/project.css' %}">
@@ -17,9 +18,9 @@
 <main>		
     <div data-toggle="modal" data-targer="#pj1">
       <article class="profile">
-        <img src="https://picsum.photos/200/300" alt="프로젝트 이미지" >
-        <h1>Project1</h1>
-        <h2>Lorem ipsum dolor sit amet consectetur adipisicing.</h2>
+        <img src="{% static 'portfolio/imgs/image_for_pj1.PNG' %}" alt="프로젝트 이미지" >
+        <h1>산불관련데이터 시각화</h1>
+        <h2>개인 포트폴리오 웹페이지 제작 및 대시보드를 활용한 데이터 분석 시각화</h2>
         <a href="#" class="moreview" data-toggle="modal" data-target="#pj1">Watch More</a>
       </article>
     </div>
@@ -27,7 +28,7 @@
       <article class="profile">
         <img src="https://picsum.photos/200/400" alt="프로젝트 이미지" >
         <h1>Project2</h1>
-        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+        <h2>추후 업데이트 예정!</h2>
         <a href="#" class="moreview" data-toggle="modal" data-target="#pj2">Watch More</a>
       </article>
     </div>
@@ -35,7 +36,7 @@
       <article class="profile">
         <img src="https://picsum.photos/200/220" alt="프로필 이미지" >
         <h1>Project3</h1>
-        <h2>Lorem ipsum dolor sit amet.</h2>
+        <h2>추후 업데이트 예정!</h2>
         <a href="#" class="moreview" data-toggle="modal" data-target="#pj3">Watch More</a>
       </article>
     </div>
@@ -46,7 +47,7 @@
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="pj1">프로젝트 타이틀1</h5>
+                <h5 class="modal-title" id="pj1">산불관련데이터 시각화</h5>
                 <button type="btn btn-outline-primary" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -54,10 +55,16 @@
             <div class="modal-body">
                 <div class="row">
                     <div class="col-lg-7">
-                        <img class="img-fluid" src="https://picsum.photos/280/200">
+                        <a href="/dashboard/"><img class="img-fluid" src="{% static 'portfolio/imgs/image_for_pj1.PNG' %}"></a>
                     </div>
                     <div class="col-lg-5">
-                        <p>프로젝트 내용1</p>
+                        <p>
+                            <br>
+                            산불관련 데이터를 원인별, 월별, 요일별, 시간대별로 수집하여<br>
+                            수집한 데이터를 DB에 입력하여 장고와 연결해서 데이터를 불러와, chart.js를 이용해 시각화하였다.<br>
+                            버튼을 눌러 각 조건별 그래프와 그래프 별 분석 내용을 나타나도록 구현했으며,<br>
+                            스크롤 없이 한 페이지 내에 정보를 보여줌으로써 데이터를 한 눈에 접할 수 있도록 했다.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -83,7 +90,7 @@
                         <img class="img-fluid" src="https://picsum.photos/280/200">
                     </div>
                     <div class="col-lg-5">
-                        <p>프로젝트 내용2</p>
+                        <p>추후 업데이트 예정!</p>
                     </div>
                 </div>
             </div>
@@ -109,7 +116,7 @@
                         <img class="img-fluid" src="https://picsum.photos/280/200">
                     </div>
                     <div class="col-lg-5">
-                        <p>프로젝트 내용3</p>
+                        <p>추후 업데이트 예정!</p>
                     </div>
                 </div>
             </div>

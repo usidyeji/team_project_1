@@ -1,12 +1,4 @@
 
-div.ps{
-  margin-left: 5px;
-}
-
-div h1{
-  margin-bottom: 4px;
-}
-
 .btn_gotop {
 	display:none;
 	position:fixed;
@@ -20,4 +12,5 @@ div h1{
 	cursor:pointer;
 	padding:15px 20px;
 	border-radius:100%;
+	margin-left: 760px;
 }

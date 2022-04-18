@@ -39,16 +39,22 @@ img {
 }
 
 h2 {
-  font: bold 24px/1.2 'arial';
+  /* font: bold 24px/1.2 'NanumBarunGothicYetHangul'; */
+  font: 24px/1.2 'NanumBarunGothicYetHangul';
   position: absolute;
   right: 50px;
   top: 240px;
 }
 
+body.post{
+  margin-left: 30px;
+}
+
 
 /* menu */
-section nav.menu {
-  position: absolute;
+section div.menu {
+  /* position: absolute; */
+  position: fixed;
   /* background: #000; */
   /* width: 100%; */
   height: 250px;
@@ -58,14 +64,14 @@ section nav.menu {
   top: 30%;
   justify-content: space-between;
 }
-section nav.menu a {
+section div.menu a {
   background: aliceblue;
   width: 30px;
   height: 30px;
   border-radius: 50%;
   margin: 0px 10px;
 }
-section nav.menu a.on {
+section div.menu a.on {
   background-color: rgb(81, 158, 245);
   box-shadow: 2px 2px 5px rgba(74, 152, 255, 0.7);
 }
@@ -132,4 +138,37 @@ section nav.menu a.on {
   border-radius: 10px;
   transition: 1s linear;
   /* border: 3px solid blue; */
+}
+
+div.Chartwrapper{
+  display: none;
+}
+
+a.button {
+  /* display: block; */
+  /* position: relative;
+  float: left; */
+  width: 220px;
+  padding: 3px;
+  margin: 0px 10px 30px 0;
+  font-weight: 400;
+  text-align: center;
+  line-height: 25px;
+  color: #FFF;
+  border-radius: 3px;
+  /* transition: all 0.2s ; */
+  background-color: rgb(81, 158, 245);
+
+}
+
+p{
+  margin-top: 15px;
+  margin-right: 25px;
+  /* width: 1020px; */
+  /* font: 24px/1.2 'NanumBarunGothicYetHangul'; */
+  font: 18px/1.7 'NanumBarunGothicYetHangul';
+}
+
+h4.ptitle{
+  font: 24px/1.2 'NanumSquareAceb';
 }
