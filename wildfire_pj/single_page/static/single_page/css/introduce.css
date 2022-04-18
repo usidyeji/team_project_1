@@ -169,6 +169,17 @@ p{
   font: 18px/1.7 'NanumBarunGothicYetHangul';
 }
 
+p.summary{
+  font: 12px/1.7 'NanumBarunGothicYetHangul';
+}
+
+a.highlight{
+  font: 12px/1.7 'NanumBarunGothicYetHangul';
+  background-color: lightyellow;
+  text-decoration: none;
+  color: black;
+}
+
 h4.ptitle{
   font: 24px/1.2 'NanumSquareAceb';
 }
